@@ -14,6 +14,7 @@ main {
     display: flex;
     justify-content: flex-end;
     margin: 1rem 0;
+    max-width: 800px;
 
     nav {
       a {
@@ -42,6 +43,7 @@ main {
       background: $light-grey;
       border-radius: 0.5rem;
       padding: 2rem 1rem 3rem;
+      max-width: 800px;
       button {
         @include button-shadow;
         background: adjust-color($pale-blue, $lightness: 10%);
@@ -62,6 +64,10 @@ main {
   }
   table {
     width: 100%;
+    max-width: 800px;
+    td {
+      padding: 0.22rem;
+    }
     thead {
       tr {
         background: $off-white;
