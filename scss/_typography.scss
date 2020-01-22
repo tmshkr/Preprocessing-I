@@ -1,12 +1,23 @@
+$sans-serif: "Lato", sans-serif;
+$serif: "Merriweather", serif;
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", sans-serif;
+  font-family: $sans-serif;
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: $serif;
+}
+
+nav {
+  a {
+    font-family: $sans-serif;
+    text-decoration: none;
+    color: #555;
+  }
 }
