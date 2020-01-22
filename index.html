@@ -22,12 +22,41 @@
   <body>
     <main>
       <header>
-        <nav>
+        <button id="menu-button">Menu</button>
+        <nav id="top">
           <a href="https://www.tmshkr.com/">Home</a>
           <a href="https://www.tmshkr.com/about">About</a>
           <a href="https://tmshkr.github.io/portfolio-website/">Portfolio</a>
           <a href="https://www.tmshkr.com/contact">Contact</a>
         </nav>
+        <script>
+          var nav = document.getElementById("top");
+          var __isMenuOpen = false;
+          document.getElementById("menu-button").onclick = handleMenu;
+          window.matchMedia("(max-width: 500px)").addListener(handleResize);
+
+          function handleMenu(e) {
+            if (__isMenuOpen) return;
+            e.stopPropagation();
+            nav.style.height = nav.scrollHeight + "px";
+            __isMenuOpen = true;
+            document.body.style.cursor = "pointer";
+            document.onclick = function() {
+              nav.style.height = 0;
+              __isMenuOpen = false;
+              document.body.style.cursor = null;
+              document.onclick = null;
+            };
+          }
+          function handleResize(e) {
+            if (!e.matches) {
+              nav.style.height = null;
+              __isMenuOpen = false;
+              document.body.style.cursor = null;
+              document.onclick = null;
+            }
+          }
+        </script>
       </header>
       <section>
         <hgroup>
@@ -37,14 +66,18 @@
         <p>JavaScript is my jam!</p>
         <hr />
         <p>
-          Occasionally I have time to work on side projects.<br />
+          Occasionally, I have time to work on side projects.<br />
           If you're interested, let me know.
         </p>
-        <button>Let's Work Together</button>
+        <button
+          onclick="window.open('https://www.tmshkr.com/contact', '_blank');"
+        >
+          Let's Work Together
+        </button>
       </section>
       <section>
         <article>
-          <h2>Hello, World</h2>
+          <h2>Hello, World!</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
             laudantium illum nemo maiores corporis repudiandae, quasi omnis est
@@ -70,7 +103,7 @@
         </aside>
       </section>
       <section>
-        <h3>Work History</h3>
+        <h3>Experience</h3>
         <table>
           <thead>
             <tr>
@@ -84,7 +117,7 @@
             <tr>
               <td>1</td>
               <td>Apple</td>
-              <td>Front End Developer</td>
+              <td>Full Stack Developer</td>
               <td>JavaScript</td>
             </tr>
             <tr>
