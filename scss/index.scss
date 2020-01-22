@@ -1,0 +1,21 @@
+@use "typography";
+
+* {
+  outline: 1px solid cyan;
+}
+
+main,
+footer {
+  max-width: 900px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
+
+  a {
+    padding: 1rem;
+  }
+}
