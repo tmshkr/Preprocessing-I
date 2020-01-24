@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+// html {
+//   font-size: 21px;
+// }
+
+h1,
+h2,
+h3,
+thead {
+  font-family: $sans-serif;
+}
+
+h2,
+p {
+  color: $light-black;
+}
+
+p {
+  font-family: $serif;
+  line-height: 1.3rem;
+}
+
+header {
+  nav {
+    a {
+      font-family: $sans-serif;
+      text-decoration: none;
+      color: #555;
+    }
+  }
+  button {
+    color: black;
+    font-family: $sans-serif;
+  }
+}

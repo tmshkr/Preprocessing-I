@@ -1,1 +1,124 @@
-/* Compile your LESS file! */
+/* Breakpoints */
+/* Typography */
+/* Colors */
+/* Mixins */
+h1,
+h2,
+h3,
+thead {
+  font-family: "Lato", sans-serif;
+}
+
+h2,
+p {
+  color: #555;
+}
+
+p {
+  font-family: "Merriweather", serif;
+  line-height: 1.3rem;
+}
+
+header nav a {
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  color: #555;
+}
+header button {
+  color: black;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  max-width: 900px;
+  margin: auto;
+}
+
+main header {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
+  max-width: 800px;
+}
+main header button {
+  display: none;
+}
+main header nav a {
+  padding: 1rem;
+}
+main header nav a:last-child {
+  padding-right: 0;
+}
+@media (max-width: 500px) {
+  main header {
+    display: block;
+    margin: 0;
+  }
+  main header button {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    width: 100%;
+  }
+  main header nav {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.22s ease-out;
+  }
+  main header nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+  main header nav a:last-child {
+    padding-right: 1rem;
+  }
+}
+main section {
+  padding: 1rem;
+}
+main section:first-of-type {
+  background: #eee;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 3rem;
+  max-width: 800px;
+}
+main section:first-of-type button {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background: #e4f6fe;
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+}
+main section:nth-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section:nth-of-type(2) > * {
+  flex: 1 1 420px;
+}
+main section:nth-of-type(2) aside {
+  padding-left: 1rem;
+}
+main table {
+  width: 100%;
+  max-width: 800px;
+}
+main table td {
+  padding: 0.22rem;
+}
+main table thead tr {
+  background: #fafafa;
+}
+main table tbody tr:nth-child(odd) {
+  background: #eee;
+}
+main table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+footer {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/*# sourceMappingURL=index.css.map */
